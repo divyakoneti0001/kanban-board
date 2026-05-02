@@ -31,7 +31,7 @@ export default class Addlist extends React.Component {
       return (
         <div className="open-add-button" onClick={() => this.setEditing(true)}>
             <i className="blue add icon"></i>
-          <a href="#" style={{fontWeight:'bold'}}>Add a List</a>
+          <span style={{fontWeight:'bold'}}>Add a List</span>
         </div>  
         ); 
     }

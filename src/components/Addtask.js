@@ -33,7 +33,7 @@ export default class AddTaskForm extends React.Component {
       return (
         <div className="open-add-button" onClick={() => this.setEditing(true)}>
           <i className="blue add icon"></i>
-          <a href="#">Add a task</a>
+          <span>Add a task</span>
         </div>  
         ); 
     }
