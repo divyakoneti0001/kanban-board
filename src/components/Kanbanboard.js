@@ -55,8 +55,9 @@ export default class KanbanBoard extends Component {
     const parsedList = JSON.parse(taskList);
     const parsedDragInfo = JSON.parse(droppedTask)
     const cardsArray = parsedList[parsedDragInfo.fromList].cards
-    const taskCard = cardsArray.find(card => card.timeId == parsedDragInfo.taskId)
-    const indexOfCard = cardsArray.findIndex(card => card.timeId == parsedDragInfo.taskId)
+    const taskId = Number(parsedDragInfo.taskId)
+    const taskCard = cardsArray.find(card => card.timeId === taskId)
+    const indexOfCard = cardsArray.findIndex(card => card.timeId === taskId)
     parsedList[parsedDragInfo.fromList].cards.splice(indexOfCard, 1)
     parsedList[listNum].cards.push({...taskCard, listNumber: parseInt(listNum)})
 

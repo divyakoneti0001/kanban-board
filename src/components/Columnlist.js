@@ -4,10 +4,6 @@ import AddTaskForm from './Addtask';
 import './Columnlist.css';
 
 export default class List extends React.Component {
-  constructor(props) {
-    super(props);
-    }
-   
   render() {
     const cards = this.props.cards.map((card, index) => {
       return ( 
